@@ -1,14 +1,16 @@
 {
   "name": "emoji_tester",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Want to see how a browser is going to render something, by codepoint? ... here ya go",
+  "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "clean": "rimraf docs && mkdir docs && rimraf build && mkdir build && cd build && mkdir typescript && mkdir rollup && mkdir uglify && cd .. && cd src && cd ts && rimraf generated_code && mkdir generated_code && cd .. && cd ..",
+    "clean": "rimraf docs && mkdir docs && rimraf build && mkdir build && cd build && mkdir typescript && mkdir rollup && cd .. && cd src && cd ts && rimraf generated_code && mkdir generated_code && cd .. && cd ..",
     "site": "cp -r src/site/* docs/ && touch docs/.nojekyll",
     "write_version": "node ./src/build_js/version.js",
     "typescript": "tsc --build tsconfig.json",
-    "build": "npm run clean && npm run site && npm run write_version && npm run typescript",
+    "rollup": "rollup -c && cp ./build/rollup/index.js docs/",
+    "build": "npm run clean && npm run site && npm run write_version && npm run typescript && npm run rollup",
     "test": "vitest"
   },
   "keywords": [
@@ -20,7 +22,9 @@
   "author": "John Haugeland <stonecypher@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "rimraf": "^5.0.5",
+    "rollup": "^4.6.1",
     "typescript": "^5.3.2"
   }
 }
