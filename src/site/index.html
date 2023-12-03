@@ -4,12 +4,95 @@
   <head>
 
     <title>Unicode and Emoji Tester</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
 
-    <script defer type="text/javascript" src="index.js"></script>
+    <script defer type="text/javascript" src="index.js" charset="UTF-8"></script>
 
   </head>
 
   <body>
+
+    <table>
+
+      <tr>
+        <td id="buttonrange" colspan="2">
+
+
+          <div id="base">
+
+            <button onclick="window.et.append('1F9D2')">🧒</button>
+            <button onclick="window.et.append('1F9D1')">🧑</button>
+            <button onclick="window.et.append('1F466')">👦</button>
+            <button onclick="window.et.append('1F467')">👧</button>
+            <button onclick="window.et.append('1F468')">👨</button>
+            <button onclick="window.et.append('1F469')">👩</button>
+
+            &nbsp;
+
+            <button onclick="window.et.append('1F471')">👱</button>
+<!--        <button onclick="window.et.append('1F471 200D 2642 FE0F')">👱‍♂️</button>
+            <button onclick="window.et.append('1F471 200D 2640 FE0F')">👱‍♀️</button>    -->
+            <button onclick="window.et.append('1F474')">👴</button>
+            <button onclick="window.et.append('1F475')">👵</button>
+            <button onclick="window.et.append('1F476')">👶</button>
+          </div>
+
+
+          <div id="skin">
+
+            <button onclick="window.et.append('1F3FB')">🏻</button>
+            <button onclick="window.et.append('1F3FC')">🏼</button>
+            <button onclick="window.et.append('1F3FD')">🏽</button>
+            <button onclick="window.et.append('1F3FE')">🏾</button>
+            <button onclick="window.et.append('1F3FF')">🏿</button>
+
+          </div>
+
+
+          <div id="hair">
+
+            <button onclick="window.et.append('1F9B0')">🦰</button>
+            <button onclick="window.et.append('1F9B1')">🦱</button>
+            <button onclick="window.et.append('1F9B2')">🦲</button>
+            <button onclick="window.et.append('1F9B3')">🦳</button>
+
+          </div>
+
+
+          <div id="color">
+            <button onclick="window.et.append('2B1B')" >⬛</button>
+            <button onclick="window.et.append('2B1C')" >⬜</button>
+            <button onclick="window.et.append('1F7E5')">🟥</button>
+            <button onclick="window.et.append('1F7E6')">🟦</button>
+            <button onclick="window.et.append('1F7E7')">🟧</button>
+            <button onclick="window.et.append('1F7E8')">🟨</button>
+            <button onclick="window.et.append('1F7E9')">🟩</button>
+            <button onclick="window.et.append('1F7EA')">🟪</button>
+            <button onclick="window.et.append('1F7EB')">🟫</button>
+          </div>
+
+
+          <div id="util">
+            <button onclick="window.et.append('200D')">ZWJ</button>
+            <button onclick="window.et.append('FE0F')">IRE</button>
+          </div>
+
+
+        </td>
+      </tr>
+
+      <tr>
+
+        <td id="input">
+          <textarea id="input_ta" rows="10" cols="50"></textarea>
+        </td>
+
+        <td id="output"></td>
+
+      </tr>
+
+    </table>
+
   </body>
 
 </html>

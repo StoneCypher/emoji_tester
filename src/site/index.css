@@ -1,0 +1,8 @@
+
+body { background-color: #ddd; }
+
+#buttonrange           { padding-bottom: 3em; }
+#buttonrange div + div { margin-top: 0.25em;  }
+#buttonrange button    { min-width: 2em; text-align: center; font-family: "segoe ui emoji"; background-color: #def; border: 1px solid black; border-radius: 0.2em; }
+
+#output                { padding-left: 3em; }

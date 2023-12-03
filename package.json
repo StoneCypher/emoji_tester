@@ -1,6 +1,6 @@
 {
   "name": "emoji_tester",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Want to see how a browser is going to render something, by codepoint? ... here ya go",
   "type": "module",
   "main": "dist/index.js",
